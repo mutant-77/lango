@@ -1,0 +1,18 @@
+{
+  "body": [
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "inner.txt",
+      "path": "Alpha_dir/inner.txt",
+      "size": 12
+    }
+  ],
+  "case": "tree_mixed_case",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/tree?id=<UUID>&path=Alpha_dir"
+  },
+  "status": 200
+}

@@ -1,0 +1,12 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "instances_delete",
+  "request": {
+    "json": null,
+    "method": "DELETE",
+    "url": "/instances/<UUID>"
+  },
+  "status": 200
+}

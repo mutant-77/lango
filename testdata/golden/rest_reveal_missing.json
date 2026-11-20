@@ -1,0 +1,16 @@
+{
+  "body": {
+    "detail": "path not found"
+  },
+  "captured": [],
+  "case": "reveal_missing",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "missing_reveal.txt"
+    },
+    "method": "POST",
+    "url": "/reveal"
+  },
+  "status": 404
+}

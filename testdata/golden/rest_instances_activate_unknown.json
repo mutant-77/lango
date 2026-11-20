@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "instance not found"
+  },
+  "case": "instances_activate_unknown",
+  "request": {
+    "json": null,
+    "method": "POST",
+    "url": "/instances/<UUID>/activate"
+  },
+  "status": 404
+}

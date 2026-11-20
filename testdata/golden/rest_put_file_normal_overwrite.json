@@ -1,0 +1,25 @@
+{
+  "body": {
+    "bytes": 25,
+    "mtime": "<MTIME>",
+    "ok": true
+  },
+  "case": "put_file_normal_overwrite",
+  "disk": {
+    "put_overwrite.txt": {
+      "bytes_hex": "6e6f726d616c206f766572777269746520636f6e74656e740d0a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "normal overwrite content\n",
+      "id": "<UUID>",
+      "path": "put_overwrite.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 200
+}

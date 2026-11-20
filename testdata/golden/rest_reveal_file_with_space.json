@@ -1,0 +1,23 @@
+{
+  "body": {
+    "ok": true
+  },
+  "captured": [
+    {
+      "args": [
+        "explorer.exe /select,\"<ROOT>\\test file.txt\""
+      ],
+      "target": "subprocess.Popen"
+    }
+  ],
+  "case": "reveal_file_with_space",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "test file.txt"
+    },
+    "method": "POST",
+    "url": "/reveal"
+  },
+  "status": 200
+}

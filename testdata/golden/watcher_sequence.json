@@ -1,0 +1,202 @@
+{
+  "ops": [
+    {
+      "events": [
+        {
+          "is_dir": false,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "new.txt",
+          "size": 7
+        },
+        {
+          "is_dir": false,
+          "kind": "modified",
+          "mtime": "<MTIME>",
+          "path": "new.txt"
+        }
+      ],
+      "op": "create_file"
+    },
+    {
+      "events": [
+        {
+          "is_dir": false,
+          "kind": "modified",
+          "mtime": "<MTIME>",
+          "path": "new.txt"
+        },
+        {
+          "is_dir": false,
+          "kind": "modified",
+          "mtime": "<MTIME>",
+          "path": "new.txt"
+        },
+        {
+          "is_dir": false,
+          "kind": "modified",
+          "mtime": "<MTIME>",
+          "path": "new.txt"
+        },
+        {
+          "is_dir": false,
+          "kind": "modified",
+          "mtime": "<MTIME>",
+          "path": "new.txt"
+        }
+      ],
+      "op": "write_file_twice"
+    },
+    {
+      "events": [
+        {
+          "is_dir": true,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "incoming",
+          "size": null
+        },
+        {
+          "is_dir": true,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "incoming/sub",
+          "size": null
+        },
+        {
+          "is_dir": false,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "incoming/file1.txt",
+          "size": 11
+        },
+        {
+          "is_dir": false,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "incoming/sub/file2.txt",
+          "size": 11
+        },
+        {
+          "kind": "dir-changed",
+          "path": "incoming"
+        },
+        {
+          "kind": "dir-changed",
+          "path": "incoming/sub"
+        }
+      ],
+      "op": "create_dir_with_content"
+    },
+    {
+      "events": [
+        {
+          "is_dir": true,
+          "kind": "created",
+          "mtime": "<MTIME>",
+          "path": "empty_dir",
+          "size": null
+        }
+      ],
+      "op": "create_empty_dir"
+    },
+    {
+      "events": [
+        {
+          "dest": "renamed.txt",
+          "is_dir": false,
+          "kind": "moved",
+          "path": "new.txt"
+        }
+      ],
+      "op": "rename_file"
+    },
+    {
+      "events": [
+        {
+          "dest": "moved_dir",
+          "is_dir": true,
+          "kind": "moved",
+          "path": "incoming"
+        },
+        {
+          "dest": "moved_dir/sub",
+          "is_dir": true,
+          "kind": "moved",
+          "path": "incoming/sub"
+        },
+        {
+          "dest": "moved_dir/file1.txt",
+          "is_dir": false,
+          "kind": "moved",
+          "path": "incoming/file1.txt"
+        },
+        {
+          "dest": "moved_dir/sub/file2.txt",
+          "is_dir": false,
+          "kind": "moved",
+          "path": "incoming/sub/file2.txt"
+        },
+        {
+          "kind": "dir-changed",
+          "path": "moved_dir"
+        }
+      ],
+      "op": "rename_dir"
+    },
+    {
+      "events": [
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "renamed.txt"
+        }
+      ],
+      "op": "delete_file"
+    },
+    {
+      "events": [
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "moved_dir/file1.txt"
+        },
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "moved_dir/sub/file2.txt"
+        },
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "moved_dir/sub"
+        },
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "moved_dir"
+        }
+      ],
+      "op": "delete_dir_tree"
+    },
+    {
+      "events": [],
+      "op": "create_in_ignored"
+    },
+    {
+      "events": [
+        {
+          "is_dir": false,
+          "kind": "deleted",
+          "path": "empty_dir"
+        },
+        {
+          "is_dir": true,
+          "kind": "deleted",
+          "path": ""
+        }
+      ],
+      "op": "delete_root"
+    }
+  ]
+}

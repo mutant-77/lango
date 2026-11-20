@@ -1,0 +1,15 @@
+{
+  "instances": [
+    {
+      "id": "e784d9ba-e62b-4c98-892c-6d4c0124fcde",
+      "path": "E:\\Codigo\\BooksGen",
+      "agent": "agy"
+    },
+    {
+      "id": "4aeeff2e-bd1d-40c5-84e4-369918c11bde",
+      "path": "E:\\Codigo\\Lango",
+      "agent": "claude"
+    }
+  ],
+  "active": "e784d9ba-e62b-4c98-892c-6d4c0124fcde"
+}

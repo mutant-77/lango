@@ -1,0 +1,25 @@
+{
+  "body": {
+    "bytes": 12,
+    "mtime": "<MTIME>",
+    "ok": true
+  },
+  "case": "put_file_non_ascii",
+  "disk": {
+    "put_non_ascii.txt": {
+      "bytes_hex": "c3b1616e64c3ba20e282ac0d0a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "ñandú €\n",
+      "id": "<UUID>",
+      "path": "put_non_ascii.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 200
+}

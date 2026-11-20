@@ -1,0 +1,22 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "mkdir_new_nested",
+  "disk": {
+    "nested/deep/newdir": {
+      "bytes_hex": null,
+      "exists": true,
+      "is_dir": true
+    }
+  },
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "nested/deep/newdir"
+    },
+    "method": "POST",
+    "url": "/mkdir"
+  },
+  "status": 200
+}

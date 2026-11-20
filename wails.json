@@ -1,0 +1,9 @@
+{
+  "name": "Lango",
+  "outputfilename": "Lango",
+  "frontend:dir": "ui",
+  "wailsjsdir": "./build",
+  "info": {
+    "productVersion": "1.0.0"
+  }
+}

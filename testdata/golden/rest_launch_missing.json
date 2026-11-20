@@ -1,0 +1,16 @@
+{
+  "body": {
+    "detail": "file not found"
+  },
+  "captured": [],
+  "case": "launch_missing",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "missing.bat"
+    },
+    "method": "POST",
+    "url": "/launch"
+  },
+  "status": 404
+}

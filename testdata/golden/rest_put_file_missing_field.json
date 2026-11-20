@@ -1,0 +1,28 @@
+{
+  "body": {
+    "detail": [
+      {
+        "input": {
+          "id": "<UUID>",
+          "path": "put_overwrite.txt"
+        },
+        "loc": [
+          "body",
+          "content"
+        ],
+        "msg": "Field required",
+        "type": "missing"
+      }
+    ]
+  },
+  "case": "put_file_missing_field",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "put_overwrite.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 422
+}

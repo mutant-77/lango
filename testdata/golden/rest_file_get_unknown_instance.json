@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "instance not found"
+  },
+  "case": "file_get_unknown_instance",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/file?id=<UUID>&path=sample.py"
+  },
+  "status": 404
+}

@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "file not found"
+  },
+  "case": "file_get_missing",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/file?id=<UUID>&path=missing.txt"
+  },
+  "status": 404
+}

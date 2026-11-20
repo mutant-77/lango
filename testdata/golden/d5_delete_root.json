@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "path outside instance"
+  },
+  "case": "d5_delete_root",
+  "request": {
+    "json": null,
+    "method": "DELETE",
+    "url": "/file?id=<UUID>&path="
+  },
+  "status": 403
+}

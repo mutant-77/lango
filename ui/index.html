@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lango</title>
+
+  <!-- Local JetBrains Mono (vendor/fonts, @font-face in style.css) — no network, no font swap -->
+  <link rel="preload" href="vendor/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="vendor/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="vendor/xterm/xterm.css">
+  <link rel="stylesheet" href="style.css?v=17">
+</head>
+
+<body>
+
+  <!-- file-type icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-py" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#3776ab" /><text x="8" y="11" text-anchor="middle"
+          font-size="7" font-weight="700" font-family="JetBrains Mono,monospace" fill="#ffd43b">py</text>
+      </symbol>
+      <symbol id="i-htm" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#e44d26" /><text x="8" y="11" text-anchor="middle"
+          font-size="8" font-weight="700" font-family="JetBrains Mono,monospace" fill="#fff">5</text>
+      </symbol>
+      <symbol id="i-css" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#264de4" /><text x="8" y="11" text-anchor="middle"
+          font-size="9" font-weight="700" font-family="JetBrains Mono,monospace" fill="#fff">#</text>
+      </symbol>
+      <symbol id="i-js" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#f7df1e" /><text x="8" y="11" text-anchor="middle"
+          font-size="7" font-weight="700" font-family="JetBrains Mono,monospace" fill="#000">JS</text>
+      </symbol>
+      <symbol id="i-md" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#519aba" /><text x="8" y="11" text-anchor="middle"
+          font-size="7" font-weight="700" font-family="JetBrains Mono,monospace" fill="#fff">md</text>
+      </symbol>
+      <symbol id="i-txt" viewBox="0 0 16 16">
+        <rect x="1" y="2" width="14" height="12" rx="2" fill="#5a5a5a" />
+        <path d="M4 6h8M4 9h8M4 12h5" stroke="#ccc" stroke-width="1" stroke-linecap="round" fill="none" />
+      </symbol>
+      <!-- agent icon -->
+      <symbol id="i-agent-dot" viewBox="0 0 20 20">
+        <circle cx="10" cy="10" r="5" fill="currentColor" />
+      </symbol>
+      <!-- tree chevron (stroke from .chev in style.css; rotated 90° when open) -->
+      <symbol id="i-chev" viewBox="0 0 12 12">
+        <path d="M4.5 3l3 3-3 3" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="app">
+
+    <div id="notifications"></div>
+
+    <div class="body">
+
+      <!-- Sidebar: sessions on top, file tree below -->
+      <nav class="sidebar">
+        <section class="sessions">
+          <div class="pane-head pywebview-drag-region">
+            <span class="pane-label">Sessions</span>
+            <button class="editor-btn" id="btn-add-session" title="Add project">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 01.5.5v5h5a.5.5 0 010 1h-5v5a.5.5 0 01-1 0v-5h-5a.5.5 0 010-1h5v-5A.5.5 0 018 2z"/></svg>
+            </button>
+          </div>
+          <!-- populated dynamically by app.js -->
+          <div class="session-list" id="activitybar"></div>
+        </section>
+        <div class="divider divider-h" data-target="sessions"></div>
+        <section class="explorer">
+          <div class="pane-head pywebview-drag-region">
+            <span class="pane-label">Explorer</span><span class="pane-sep" aria-hidden="true" hidden>·</span><span id="project-name" class="pane-project" hidden></span>
+            <button class="filter-btn" id="btn-changes" title="Show changed files only" hidden>
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M2.5 4h11M4.5 8h7M6.5 12h3"/></svg>
+              Changes <b id="changes-count"></b>
+            </button>
+          </div>
+          <div class="tree" id="tree"></div>
+          <div class="tree" id="tree-changes" hidden></div>
+        </section>
+      </nav>
+
+      <div class="divider" data-target="sidebar"></div>
+
+      <main class="editor-group">
+        <div class="pane-head pywebview-drag-region">
+          <span class="pane-label">Code</span>
+          <span class="editor-badge" id="editor-badge"></span>
+          <div class="change-ctl" id="change-ctl" hidden>
+            <span class="file-path" id="change-path"></span>
+            <span class="git-pill" id="change-pill"></span>
+            <div class="seg-ctl"><button data-view="diff">Diff</button><button data-view="file">File</button></div>
+            <span class="change-nav" id="change-nav">
+              <button class="editor-btn" id="change-prev" title="Previous change (Alt+↑)"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10l4.5-4.5 4.5 4.5"/></svg></button>
+              <span class="hunk-nav" id="hunk-nav"></span>
+              <button class="editor-btn" id="change-next" title="Next change (Alt+↓)"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6l4.5 4.5 4.5-4.5"/></svg></button>
+            </span>
+            <span class="change-note" id="change-note" hidden>Unsaved changes not included</span>
+            <button class="editor-btn" id="change-close" title="Back to list (Esc)"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+          </div>
+          <div class="editor-actions">
+            <button class="editor-btn" id="btn-wrap" title="Toggle Word Wrap (Alt+Z)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3 3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"/>
+              </svg>
+            </button>
+            <button class="editor-btn" id="btn-reload" title="Reload from disk" disabled>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+              </svg>
+            </button>
+            <button class="editor-btn" id="btn-save" title="Save (Ctrl+S)" disabled>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V7l-4-4zm-5 16a3 3 0 110-6 3 3 0 010 6zm3-10H6V5h9v4z"/>
+              </svg>
+            </button>
+            <button class="editor-btn" id="btn-close-file" title="Close file" disabled>
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <div id="editor"></div>
+          <div class="diff-view" id="diff-view" tabindex="0" hidden></div>
+          <div class="editor-empty" id="editor-empty"><img src="logo.svg" alt="" draggable="false"><span>Open a file from the tree to view it here.</span></div>
+          <div class="changes-home" id="changes-home" hidden></div>
+        </div>
+      </main>
+
+      <div class="divider" data-target="terminal"></div>
+
+      <section class="terminal">
+        <div class="pane-head pywebview-drag-region">
+          <span class="pane-label">Terminal</span>
+          <div class="term-tabs" id="term-tabs"></div>
+          <button class="term-new" id="btn-add-term" title="New terminal (Ctrl+Shift+T)">+</button>
+          <button class="term-new" id="btn-prompts" title="Prompts (Ctrl+Shift+P)" disabled>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3.5h10v7H7.5L4.5 13v-2.5H3z"/><path d="M5.5 6h5M5.5 8h3"/></svg>
+          </button>
+          <div class="window-controls">
+            <div id="win-min" title="Minimize">&#x2013;</div>
+            <div id="win-max" title="Maximize">&#x25A1;</div>
+            <div class="close" id="win-close" title="Close">&#x2715;</div>
+          </div>
+        </div>
+        <div id="terminal"></div>
+      </section>
+
+    </div>
+
+    <footer class="statusbar">
+      <div class="seg" id="file-meta"></div>
+      <div class="right">
+        <div class="seg branch" id="git-branch" hidden><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="4" cy="3.5" r="1.6"/><circle cx="4" cy="12.5" r="1.6"/><circle cx="12" cy="5.5" r="1.6"/><path d="M4 5.1v5.8M12 7.1c0 3-4 2.4-7.2 4"/></svg><span></span></div>
+        <div class="seg chg" id="git-count" hidden></div>
+        <div class="seg" id="watch-status"><span class="live-dot">&#9679;</span> live</div>
+      </div>
+    </footer>
+    <div class="pal-backdrop" id="prompt-palette" hidden>
+      <div class="pal">
+        <div class="pal-in">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+          <input id="pal-input" type="text" placeholder="Search prompts…" spellcheck="false" autocomplete="off">
+        </div>
+        <div class="pal-body" id="pal-body">
+          <div class="pal-list" id="pal-list"></div>
+          <pre class="pal-prev" id="pal-prev"></pre>
+        </div>
+        <div class="pal-empty" id="pal-empty" hidden>
+          <strong>No prompts yet</strong>
+          <span>Save the ones you keep retyping.</span>
+          <div class="pal-empty-actions">
+            <button class="pal-btn" id="pal-new">New prompt</button>
+            <button class="pal-btn ghost" id="pal-folder">Open folder</button>
+          </div>
+        </div>
+        <div class="pal-foot">
+          <span><kbd>↵</kbd> Insert</span>
+          <span><kbd>Ctrl</kbd><kbd>E</kbd> Edit</span>
+          <span><kbd>Ctrl</kbd><kbd>N</kbd> New</span>
+          <span><kbd>Esc</kbd> Close</span>
+          <span class="pal-target" id="pal-target"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/xterm/xterm.js"></script>
+  <script src="vendor/xterm/addon-fit.js"></script>
+  <script src="vendor/xterm/addon-webgl.js"></script>
+  <script src="vendor/xterm/addon-unicode11.js"></script>
+  <script src="vendor/xterm/addon-web-links.js"></script>
+  <script src="lango-config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

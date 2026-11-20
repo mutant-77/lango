@@ -1,0 +1,26 @@
+{
+  "body": {
+    "detail": [
+      {
+        "input": 12345,
+        "loc": [
+          "body",
+          "content"
+        ],
+        "msg": "Input should be a valid string",
+        "type": "string_type"
+      }
+    ]
+  },
+  "case": "put_file_wrong_type",
+  "request": {
+    "json": {
+      "content": 12345,
+      "id": "<UUID>",
+      "path": "put_overwrite.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 422
+}

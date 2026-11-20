@@ -1,0 +1,27 @@
+{
+  "body": {
+    "bytes": 22,
+    "mtime": "<MTIME>",
+    "ok": true
+  },
+  "case": "put_file_conflict_force",
+  "disk": {
+    "put_conflict_force.txt": {
+      "bytes_hex": "666f726365207772697474656e20636f6e74656e740d0a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "force written content\n",
+      "force": true,
+      "id": "<UUID>",
+      "mtime": "<MTIME>",
+      "path": "put_conflict_force.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 200
+}

@@ -1,0 +1,14 @@
+{
+  "body": {
+    "detail": "Not a directory: <ROOT>\\b.txt"
+  },
+  "case": "instances_post_file_path",
+  "request": {
+    "json": {
+      "path": "<ROOT>\\b.txt"
+    },
+    "method": "POST",
+    "url": "/instances"
+  },
+  "status": 400
+}

@@ -1,0 +1,23 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "mkfile_existing",
+  "disk": {
+    "mkfile_existing.txt": {
+      "bytes_hex": "6578697374696e67206d6b66696c6520636f6e74656e740a",
+      "exists": true,
+      "is_dir": false,
+      "mtime_changed": true
+    }
+  },
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "mkfile_existing.txt"
+    },
+    "method": "POST",
+    "url": "/mkfile"
+  },
+  "status": 200
+}

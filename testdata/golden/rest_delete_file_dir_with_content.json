@@ -1,0 +1,19 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "delete_file_dir_with_content",
+  "disk": {
+    "dir_to_delete": {
+      "bytes_hex": null,
+      "exists": false,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": null,
+    "method": "DELETE",
+    "url": "/file?id=<UUID>&path=dir_to_delete"
+  },
+  "status": 200
+}

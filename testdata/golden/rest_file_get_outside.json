@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "path outside instance"
+  },
+  "case": "file_get_outside",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/file?id=<UUID>&path=../outside.txt"
+  },
+  "status": 403
+}
