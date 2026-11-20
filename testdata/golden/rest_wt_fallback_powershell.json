@@ -1,0 +1,46 @@
+{
+  "body": {
+    "ok": true,
+    "via": "powershell.exe"
+  },
+  "captured": [
+    {
+      "args": [
+        [
+          "wt.exe",
+          "-d",
+          "<ROOT>"
+        ]
+      ],
+      "kwargs": {
+        "creationflags": 0,
+        "cwd": "<ROOT>"
+      },
+      "target": "subprocess.Popen"
+    },
+    {
+      "args": [
+        [
+          "powershell.exe",
+          "-NoExit",
+          "-Command",
+          "Set-Location -LiteralPath '<ROOT>'"
+        ]
+      ],
+      "kwargs": {
+        "creationflags": 16,
+        "cwd": "<ROOT>"
+      },
+      "target": "subprocess.Popen"
+    }
+  ],
+  "case": "wt_fallback_powershell",
+  "request": {
+    "json": {
+      "id": "<UUID>"
+    },
+    "method": "POST",
+    "url": "/wt"
+  },
+  "status": 200
+}

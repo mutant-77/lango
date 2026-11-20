@@ -1,0 +1,46 @@
+# Artefactos de compilación
+build/bin/
+
+# Wails
+build/wailsjs/
+
+# Datos de ejecución
+log/
+WebView2/
+lango.json
+
+# Local
+.claude/settings.local.json
+
+# Herramientas y copias locales
+.claude/
+.freebuff/
+.bkps/
+.agents/
+
+# Documentación de proceso interna
+AGENTS.md
+CLAUDE.md
+DECISIONES.md
+DIFERIDOS.md
+REGISTRO.md
+BASELINE_python.md
+.historial/
+_*.md
+_*.html
+wireframe.html
+
+# Binarios de terceros (se copian a build/bin)
+third_party/conpty/*.exe
+third_party/conpty/*.dll
+
+# Basura general
+*.rar
+*.log
+*.bak
+*.tmp
+.env*
+
+# Scripts locales
+publicar.bat
+*.syso

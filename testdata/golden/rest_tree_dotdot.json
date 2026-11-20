@@ -1,0 +1,25 @@
+{
+  "body": [
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "project",
+      "path": "../project",
+      "size": null
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "lango.json",
+      "path": "../lango.json",
+      "size": 247
+    }
+  ],
+  "case": "tree_dotdot",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/tree?id=<UUID>&path=.."
+  },
+  "status": 200
+}

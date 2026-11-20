@@ -1,0 +1,23 @@
+{
+  "body": {
+    "ok": true
+  },
+  "captured": [
+    {
+      "args": [
+        "explorer.exe \"<ROOT>\\Docs\""
+      ],
+      "target": "subprocess.Popen"
+    }
+  ],
+  "case": "reveal_folder",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "Docs"
+    },
+    "method": "POST",
+    "url": "/reveal"
+  },
+  "status": 200
+}

@@ -1,0 +1,10 @@
+{
+  "body": [],
+  "case": "tree_file",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/tree?id=<UUID>&path=b.txt"
+  },
+  "status": 200
+}

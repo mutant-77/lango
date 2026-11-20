@@ -1,0 +1,15 @@
+{
+  "body": {
+    "content": "a\nb\n",
+    "lang": "text",
+    "lines": 2,
+    "mtime": "<MTIME>"
+  },
+  "case": "file_get_crlf",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/file?id=<UUID>&path=crlf.txt"
+  },
+  "status": 200
+}

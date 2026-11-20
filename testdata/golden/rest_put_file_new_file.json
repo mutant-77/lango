@@ -1,0 +1,25 @@
+{
+  "body": {
+    "bytes": 23,
+    "mtime": "<MTIME>",
+    "ok": true
+  },
+  "case": "put_file_new_file",
+  "disk": {
+    "put_new.txt": {
+      "bytes_hex": "6272616e64206e65772066696c6520636f6e74656e740d0a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "brand new file content\n",
+      "id": "<UUID>",
+      "path": "put_new.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 200
+}

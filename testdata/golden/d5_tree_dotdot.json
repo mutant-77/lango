@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "path outside instance"
+  },
+  "case": "d5_tree_dotdot",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/tree?id=<UUID>&path=.."
+  },
+  "status": 403
+}

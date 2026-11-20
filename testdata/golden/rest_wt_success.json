@@ -1,0 +1,31 @@
+{
+  "body": {
+    "ok": true,
+    "via": "wt.exe"
+  },
+  "captured": [
+    {
+      "args": [
+        [
+          "wt.exe",
+          "-d",
+          "<ROOT>"
+        ]
+      ],
+      "kwargs": {
+        "creationflags": 0,
+        "cwd": "<ROOT>"
+      },
+      "target": "subprocess.Popen"
+    }
+  ],
+  "case": "wt_success",
+  "request": {
+    "json": {
+      "id": "<UUID>"
+    },
+    "method": "POST",
+    "url": "/wt"
+  },
+  "status": 200
+}

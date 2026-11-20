@@ -1,0 +1,16 @@
+{
+  "body": {
+    "detail": "instance not found"
+  },
+  "case": "put_file_unknown_instance",
+  "request": {
+    "json": {
+      "content": "hello",
+      "id": "<UUID>",
+      "path": "put_overwrite.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 404
+}

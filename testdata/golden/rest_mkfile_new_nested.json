@@ -1,0 +1,22 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "mkfile_new_nested",
+  "disk": {
+    "nested/deep/file.txt": {
+      "bytes_hex": "",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "nested/deep/file.txt"
+    },
+    "method": "POST",
+    "url": "/mkfile"
+  },
+  "status": 200
+}

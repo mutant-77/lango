@@ -1,0 +1,20 @@
+{
+  "body": {
+    "agent": null,
+    "id": "<UUID>",
+    "idle_s": null,
+    "name": "Docs",
+    "path": "<ROOT>\\Docs",
+    "state": "fresh",
+    "terms": []
+  },
+  "case": "instances_post_valid",
+  "request": {
+    "json": {
+      "path": "<ROOT>\\Docs"
+    },
+    "method": "POST",
+    "url": "/instances"
+  },
+  "status": 200
+}

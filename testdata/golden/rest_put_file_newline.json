@@ -1,0 +1,25 @@
+{
+  "body": {
+    "bytes": 12,
+    "mtime": "<MTIME>",
+    "ok": true
+  },
+  "case": "put_file_newline",
+  "disk": {
+    "put_nl.txt": {
+      "bytes_hex": "6c696e65310d0a6c696e65320d0a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "line1\nline2\n",
+      "id": "<UUID>",
+      "path": "put_nl.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 200
+}

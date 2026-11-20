@@ -1,0 +1,27 @@
+{
+  "body": {
+    "detail": {
+      "conflict": true,
+      "mtime": "<MTIME>"
+    }
+  },
+  "case": "put_file_conflict",
+  "disk": {
+    "put_conflict.txt": {
+      "bytes_hex": "696e697469616c2070757420636f6e666c6963740a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "content": "should fail with conflict\n",
+      "id": "<UUID>",
+      "mtime": "<MTIME>",
+      "path": "put_conflict.txt"
+    },
+    "method": "PUT",
+    "url": "/file"
+  },
+  "status": 409
+}

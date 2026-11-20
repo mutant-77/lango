@@ -1,0 +1,12 @@
+{
+  "body": {
+    "detail": "path outside instance"
+  },
+  "case": "d5_sibling_prefix",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/file?id=<UUID>&path=../sibling/x.txt"
+  },
+  "status": 403
+}

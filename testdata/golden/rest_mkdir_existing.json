@@ -1,0 +1,22 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "mkdir_existing",
+  "disk": {
+    "existing_dir": {
+      "bytes_hex": null,
+      "exists": true,
+      "is_dir": true
+    }
+  },
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "existing_dir"
+    },
+    "method": "POST",
+    "url": "/mkdir"
+  },
+  "status": 200
+}

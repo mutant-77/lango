@@ -1,0 +1,291 @@
+{
+  "body": [
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": ".hidden_dir",
+      "path": ".hidden_dir",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "a",
+      "path": "a",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "Alpha_dir",
+      "path": "Alpha_dir",
+      "size": null
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "broken_link",
+      "path": "broken_link",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "dir_to_delete",
+      "path": "dir_to_delete",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "Docs",
+      "path": "Docs",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "existing_dir",
+      "path": "existing_dir",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "src",
+      "path": "src",
+      "size": null
+    },
+    {
+      "is_dir": true,
+      "mtime": "<MTIME>",
+      "name": "sub-dir",
+      "path": "sub-dir",
+      "size": null
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "..config",
+      "path": "..config",
+      "size": 11
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": ".env",
+      "path": ".env",
+      "size": 17
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "alpha.py",
+      "path": "alpha.py",
+      "size": 10
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "b.txt",
+      "path": "b.txt",
+      "size": 10
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "B2.txt",
+      "path": "B2.txt",
+      "size": 11
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "bom.txt",
+      "path": "bom.txt",
+      "size": 8
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "cr.txt",
+      "path": "cr.txt",
+      "size": 4
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "crlf.txt",
+      "path": "crlf.txt",
+      "size": 6
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "empty.txt",
+      "path": "empty.txt",
+      "size": 0
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "invalid_utf8.txt",
+      "path": "invalid_utf8.txt",
+      "size": 11
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "lf.txt",
+      "path": "lf.txt",
+      "size": 4
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "mkfile_existing.txt",
+      "path": "mkfile_existing.txt",
+      "size": 24
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "put_conflict.txt",
+      "path": "put_conflict.txt",
+      "size": 21
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "put_conflict_force.txt",
+      "path": "put_conflict_force.txt",
+      "size": 27
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "put_nl.txt",
+      "path": "put_nl.txt",
+      "size": 15
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "put_non_ascii.txt",
+      "path": "put_non_ascii.txt",
+      "size": 18
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "put_overwrite.txt",
+      "path": "put_overwrite.txt",
+      "size": 22
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "rename_dst2.txt",
+      "path": "rename_dst2.txt",
+      "size": 20
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "rename_src.txt",
+      "path": "rename_src.txt",
+      "size": 15
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "rename_src2.txt",
+      "path": "rename_src2.txt",
+      "size": 13
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "run.bat",
+      "path": "run.bat",
+      "size": 21
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.go",
+      "path": "sample.go",
+      "size": 29
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.json",
+      "path": "sample.json",
+      "size": 15
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.md",
+      "path": "sample.md",
+      "size": 8
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.py",
+      "path": "sample.py",
+      "size": 15
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.ts",
+      "path": "sample.ts",
+      "size": 22
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "sample.xyz",
+      "path": "sample.xyz",
+      "size": 22
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "seps.txt",
+      "path": "seps.txt",
+      "size": 10
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "test file.txt",
+      "path": "test file.txt",
+      "size": 19
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "to_delete.txt",
+      "path": "to_delete.txt",
+      "size": 10
+    },
+    {
+      "is_dir": false,
+      "mtime": "<MTIME>",
+      "name": "Zeta.md",
+      "path": "Zeta.md",
+      "size": 7
+    }
+  ],
+  "case": "tree_root",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/tree?id=<UUID>&path="
+  },
+  "status": 200
+}

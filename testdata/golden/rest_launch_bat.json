@@ -1,0 +1,26 @@
+{
+  "body": {
+    "ok": true
+  },
+  "captured": [
+    {
+      "args": [
+        "<ROOT>\\run.bat"
+      ],
+      "kwargs": {
+        "cwd": "<ROOT>"
+      },
+      "target": "os.startfile"
+    }
+  ],
+  "case": "launch_bat",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": "run.bat"
+    },
+    "method": "POST",
+    "url": "/launch"
+  },
+  "status": 200
+}

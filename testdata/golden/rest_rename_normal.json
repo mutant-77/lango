@@ -1,0 +1,28 @@
+{
+  "body": {
+    "ok": true
+  },
+  "case": "rename_normal",
+  "disk": {
+    "rename_dst.txt": {
+      "bytes_hex": "736f7572636520636f6e74656e740a",
+      "exists": true,
+      "is_dir": false
+    },
+    "rename_src.txt": {
+      "bytes_hex": null,
+      "exists": false,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "dst": "rename_dst.txt",
+      "id": "<UUID>",
+      "src": "rename_src.txt"
+    },
+    "method": "POST",
+    "url": "/rename"
+  },
+  "status": 200
+}

@@ -1,0 +1,28 @@
+{
+  "body": {
+    "detail": "[WinError 183] No se puede crear un archivo que ya existe: '<ROOT>\\\\rename_src2.txt' -> '<ROOT>\\\\rename_dst2.txt'"
+  },
+  "case": "rename_dest_exists",
+  "disk": {
+    "rename_dst2.txt": {
+      "bytes_hex": "6473743220616c7265616479206578697374730a",
+      "exists": true,
+      "is_dir": false
+    },
+    "rename_src2.txt": {
+      "bytes_hex": "7372633220636f6e74656e740a",
+      "exists": true,
+      "is_dir": false
+    }
+  },
+  "request": {
+    "json": {
+      "dst": "rename_dst2.txt",
+      "id": "<UUID>",
+      "src": "rename_src2.txt"
+    },
+    "method": "POST",
+    "url": "/rename"
+  },
+  "status": 500
+}

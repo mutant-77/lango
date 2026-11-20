@@ -1,0 +1,23 @@
+{
+  "body": {
+    "active": "<UUID>",
+    "instances": [
+      {
+        "agent": null,
+        "id": "<UUID>",
+        "idle_s": null,
+        "name": "project",
+        "path": "<ROOT>",
+        "state": "fresh",
+        "terms": []
+      }
+    ]
+  },
+  "case": "instances_get",
+  "request": {
+    "json": null,
+    "method": "GET",
+    "url": "/instances"
+  },
+  "status": 200
+}

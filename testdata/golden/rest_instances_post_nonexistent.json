@@ -1,0 +1,14 @@
+{
+  "body": {
+    "detail": "Not a directory: <ROOT>\\nonexistent_subfolder"
+  },
+  "case": "instances_post_nonexistent",
+  "request": {
+    "json": {
+      "path": "<ROOT>\\nonexistent_subfolder"
+    },
+    "method": "POST",
+    "url": "/instances"
+  },
+  "status": 400
+}

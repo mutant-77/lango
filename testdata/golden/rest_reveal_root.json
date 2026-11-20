@@ -1,0 +1,23 @@
+{
+  "body": {
+    "ok": true
+  },
+  "captured": [
+    {
+      "args": [
+        "explorer.exe \"<ROOT>\""
+      ],
+      "target": "subprocess.Popen"
+    }
+  ],
+  "case": "reveal_root",
+  "request": {
+    "json": {
+      "id": "<UUID>",
+      "path": ""
+    },
+    "method": "POST",
+    "url": "/reveal"
+  },
+  "status": 200
+}
